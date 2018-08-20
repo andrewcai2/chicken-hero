@@ -1,0 +1,2 @@
+module ChickenRunsHelper
+end
