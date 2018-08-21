@@ -1,4 +1,16 @@
 <p id="notice"><%= notice %></p>
+<%= @chicken_run.date %>
+<%= @chicken_run.time %>
+
+<%= link_to 'Add Order', new_order_path(chicken_run_id: @chicken_run) %>
+<br>
+
+<ul>
+  <% @chicken_run.orders.each do |order| %>
+    <li><%= order.id %></li>
+    <br>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_chicken_run_path(@chicken_run) %> |
 <%= link_to 'Back', chicken_runs_path %>

@@ -69,6 +69,6 @@ class ChickenRunsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def chicken_run_params
-      params.fetch(:chicken_run, {})
+      params.require(:chicken_run).permit(:date, :time)
     end
 end

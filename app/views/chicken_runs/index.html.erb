@@ -11,7 +11,10 @@
 
   <tbody>
     <% @chicken_runs.each do |chicken_run| %>
+
       <tr>
+        <td><%= chicken_run.date %></td>
+
         <td><%= link_to 'Show', chicken_run %></td>
         <td><%= link_to 'Edit', edit_chicken_run_path(chicken_run) %></td>
         <td><%= link_to 'Destroy', chicken_run, method: :delete, data: { confirm: 'Are you sure?' } %></td>

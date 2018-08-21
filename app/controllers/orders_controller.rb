@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+
   end
 
   # GET /orders/1/edit
@@ -24,7 +25,8 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params)
+    @order = Order.new
+    @order = ChickenRun.find(params[:chicken_run_id]).orders.build(order_params)
 
     respond_to do |format|
       if @order.save

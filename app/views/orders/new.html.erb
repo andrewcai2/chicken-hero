@@ -1,5 +1,5 @@
 <h1>New Order</h1>
 
-<%= render 'form', order: @order %>
+<%= render 'form', order: @order, chicken_run_id: params[:chicken_run_id] %>
 
 <%= link_to 'Back', orders_path %>
